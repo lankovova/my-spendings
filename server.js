@@ -1,8 +1,18 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const config = require('./config')
+
 const app = express();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+const loggerFormat = '[:date[web]] ":method :url" :status :response-time';
+app.use(morgan(loggerFormat))
+
 app.get('/', function (req, res) {
-  res.send("Hello world!");
+  res.json({ text: "Hello there" });
 });
 
-app.listen(3000);
+app.listen(config.port, () => console.log(`Server is running on port: ${config.port}`));
