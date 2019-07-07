@@ -11,7 +11,7 @@
     "lint:server": "eslint . --ignore-pattern client/",
     "lint:client": "cd client && npm run lint",
     "lint": "npm run lint:server && npm run lint:client",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm run build"
+    "heroku-postbuild": "cd client && npm install --only=prod && npm run build"
   },
   "husky": {
     "hooks": {
