@@ -5,7 +5,18 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:dev": "nodemon -r dotenv/config server.js"
+    "start:dev": "nodemon -r dotenv/config server.js",
+    "lint": "eslint **/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "npm run lint"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -20,6 +31,8 @@
     "eslint": "^5.3.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.17.2",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.1.0",
     "nodemon": "^1.19.1"
   }
 }
