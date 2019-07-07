@@ -5,8 +5,7 @@
   },
   "extends": "react-app",
   "rules": {
-    "quotes": ["error", "single"],
-    "comma-dangle": ["error", "always-multiline"]
+    "react/jsx-key": 1
   },
   "root": true
 }
