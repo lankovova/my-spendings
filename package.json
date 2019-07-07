@@ -10,17 +10,6 @@
     "start:all": "concurrently --kill-others \"npm run start:server\" \"npm run start:client\"",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/*.{js,json,md,sass}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -36,10 +25,7 @@
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.17.2",
-    "husky": "^3.0.0",
-    "lint-staged": "^9.1.0",
-    "nodemon": "^1.19.1",
-    "prettier": "^1.18.2"
+    "nodemon": "^1.19.1"
   },
   "engines": {
     "node": "10.16.0",
