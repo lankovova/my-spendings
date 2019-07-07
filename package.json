@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "build": "cd client && npm install && npm run build",
     "start": "node server.js",
     "start:server": "nodemon -r dotenv/config server.js",
     "start:client": "cd client && npm run start",
@@ -39,5 +40,8 @@
     "husky": "^3.0.0",
     "lint-staged": "^9.1.0",
     "nodemon": "^1.19.1"
+  },
+  "engines": {
+    "node": "10.16.0"
   }
 }
