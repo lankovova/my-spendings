@@ -3,9 +3,10 @@
     "browser": true,
     "jest": true
   },
-  "extends": "airbnb",
+  "extends": "react-app",
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js"] }]
+    "quotes": ["error", "single"],
+    "comma-dangle": ["error", "always-multiline"]
   },
   "root": true
 }
