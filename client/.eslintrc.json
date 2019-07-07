@@ -3,9 +3,6 @@
     "browser": true,
     "jest": true
   },
-  "extends": "react-app",
-  "rules": {
-    "react/jsx-key": 1
-  },
+  "extends": ["react-app", "plugin:react/recommended"],
   "root": true
 }
