@@ -15,9 +15,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <div>{text}</div>
-        <div>
-          {[{ id: 2, v: 2 }, { id: 1, v: 1 }, { id: 3, v: 4 }].map(a => a)}
-        </div>
       </div>
     );
   }
