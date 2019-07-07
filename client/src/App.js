@@ -1,11 +1,12 @@
-import React from 'react';
-import axios from 'axios';
+import React from "react";
+import PropTypes from "prop-types";
+import axios from "axios";
 
 class App extends React.Component {
-  state = { text: '' };
+  state = { text: "" };
 
   async componentDidMount() {
-    const res = await axios.get('/hello');
+    const res = await axios.get("/hello");
     this.setState({ text: res.data.text });
   }
 

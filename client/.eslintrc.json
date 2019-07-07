@@ -3,6 +3,9 @@
     "browser": true,
     "jest": true
   },
-  "extends": ["react-app", "plugin:react/recommended"],
+  "extends": ["react-app", "airbnb", "prettier"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }]
+  },
   "root": true
 }
