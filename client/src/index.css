@@ -1,0 +1,6 @@
+@import-normalize;
+
+body {
+  margin: 0;
+  background: 'rgba(56,55,58,1)';
+}
